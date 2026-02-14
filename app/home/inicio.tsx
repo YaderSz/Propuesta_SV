@@ -42,9 +42,6 @@ const handleSi = () => {
   setPantallaFinal(true);
 }, 9000);
 
-const galeriabtn = () =>{
-  setPantallaFinal(true);
-} 
 
 
 };
@@ -104,6 +101,9 @@ preguntarte algo que nace desde lo más sincero de mi corazón…
         className="px-5 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
           No 
           </button>
+            <audio controls autoPlay loop>
+    <source src="/wannabeyours.mp3" type="audio/mpeg" />
+  </audio>
           {explosion && (
             <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
               <div className="text-7xl animate-ping">💖</div>
@@ -174,7 +174,7 @@ Hola Mi vida, desde que te he tenido y has llegado a mi vida, todo a cambiado pa
 
 {pantallaFinal && (
   <audio autoPlay loop>
-    <source src="/musica.mp3" type="audio/mpeg" />
+    <source src="/wannabeyours.mp3" type="audio/mpeg" />
   </audio>
 )}
 
