@@ -1,9 +1,7 @@
 'use client'
 
-import { useEffect, useState} from "react"
-import Link from "next/link"
+import { useEffect, useState, useRef} from "react"
 import Image from "next/image"
-import { transform } from "next/dist/build/swc/generated-native"
 
 const Inicio = () => 
     {
@@ -11,12 +9,19 @@ const Inicio = () =>
 
       const [posicionNo, setPosicionNo] = useState({ x: 0, y: 0 });
 
-      const [corazones, setCorazones] = useState<
+      const [corazones] = useState<
   { left: string; delay: string }[]
 >([]);
 
 const [pantallaFinal, setPantallaFinal] = useState(false);
 
+const audioRef = useRef<HTMLAudioElement>(null);
+
+useEffect(() => {
+  if (pantallaFinal && audioRef.current) {
+    audioRef.current.play();
+  }
+}, [pantallaFinal]);
 
 const [explosion, setExplosion] = useState(false);
 const [petalos, setPetalos] = useState<
@@ -101,9 +106,9 @@ preguntarte algo que nace desde lo más sincero de mi corazón…
         className="px-5 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
           No 
           </button>
-            <audio controls autoPlay loop>
-    <source src="/wannabeyours.mp3" type="audio/mpeg" />
-  </audio>
+<audio constrols ref={audioRef} loop>
+  <source src="/wannabeyours.mp3" type="audio/mpeg" />
+</audio>
           {explosion && (
             <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
               <div className="text-7xl animate-ping">💖</div>
@@ -173,9 +178,9 @@ Hola Mi vida, desde que te he tenido y has llegado a mi vida, todo a cambiado pa
     </p>
 
 {pantallaFinal && (
-  <audio autoPlay loop>
-    <source src="/wannabeyours.mp3" type="audio/mpeg" />
-  </audio>
+<audio ref={audioRef} loop>
+  <source src="/wannabeyours.mp3" type="audio/mpeg" />
+</audio>
 )}
 
   </div>
