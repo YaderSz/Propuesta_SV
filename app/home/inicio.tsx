@@ -69,7 +69,7 @@ const moverBotonNo = () => {
       <Image 
         width={1020}
         height={560}
-        src="/portada.png" 
+        src="/Portada.png" 
         alt=""
       />
     </div>
@@ -106,7 +106,7 @@ preguntarte algo que nace desde lo más sincero de mi corazón…
         className="px-5 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
           No 
           </button>
-<audio constrols ref={audioRef} loop>
+<audio ref={audioRef} loop>
   <source src="/wannabeyours.mp3" type="audio/mpeg" />
 </audio>
           {explosion && (
