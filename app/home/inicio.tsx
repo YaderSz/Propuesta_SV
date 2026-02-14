@@ -42,6 +42,11 @@ const handleSi = () => {
   setPantallaFinal(true);
 }, 9000);
 
+const galeriabtn = () =>{
+  setPantallaFinal(true);
+} 
+
+
 };
 
 const moverBotonNo = () => {
@@ -77,11 +82,12 @@ const moverBotonNo = () => {
   <p className="text-lg py-6 max-w-xl">
   Priscila, mi amor…
 
-Si pudiera elegir una persona con la cual pasar todo mi tiempo,
-mis alegrías, mis sueños y hasta mis silencios
-siempre te eligire a ti.
-
-Porque con vos todo es mas bonito, real, chistoso y sincero.
+Desde que llegaste a mi vida, has sido para bien
+si tuviera la oportunidad de volver a elegirte,
+lo haria en esta y todas las vidas que existen por delante,
+eres la persona con la cual deseo pasar todo mi tiempo y ser la mujer
+con la que pase hasta que la muerte nos separe.
+Porque contigo todo es mas bonito, real, chistoso y sincero.
 
 Hoy en este mes y dia de los enamorados, cuento la fortuna con poder decir
 que tambien lo estoy, por ello queria
