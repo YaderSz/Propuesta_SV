@@ -63,6 +63,9 @@ const moverBotonNo = () => {
 
         return(
 <section className="mt-4 bg-[#f5efe6]">
+  <audio ref={audioRef} loop>
+  <source src="/wannabeyours.mp3" type="audio/mpeg" />
+</audio>
   <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen items-center">
     
     <div className="p-10 flex justify-center">
@@ -106,9 +109,7 @@ preguntarte algo que nace desde lo más sincero de mi corazón…
         className="px-5 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
           No 
           </button>
-<audio ref={audioRef} loop>
-  <source src="/wannabeyours.mp3" type="audio/mpeg" />
-</audio>
+
           {explosion && (
             <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
               <div className="text-7xl animate-ping">💖</div>
@@ -160,32 +161,52 @@ preguntarte algo que nace desde lo más sincero de mi corazón…
     
 
   </div>
-  {pantallaFinal && (
-  <div className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center z-50 animate-fadeIn">
-    
-    <h1 className="text-5xl font-bold mb-8 animate-pulse">
-      Nuestra Galeria 💕
+{pantallaFinal && (
+  <div className="fixed inset-0 bg-black text-white 
+                  flex flex-col items-center justify-center 
+                  z-50 animate-fadeIn px-6 py-10 overflow-y-auto">
+
+    <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center animate-pulse">
+      Nuestra Galería 💕
     </h1>
 
-    <div className="flex gap-8 overflow-hidden">
-      <Image src="/foto1.jpeg" width={300} height={400} alt="" className="rounded-xl shadow-2xl animate-slide" />
-      <Image src="/foto2.jpeg" width={300} height={400} alt="" className="rounded-xl shadow-2xl animate-slide delay-200" />
-      <Image src="/foto3.jpeg" width={300} height={400} alt="" className="rounded-xl shadow-2xl animate-slide delay-500" />
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl">
+      <Image 
+        src="/foto1.jpeg" 
+        width={300} 
+        height={400} 
+        alt="" 
+        className="w-full h-auto rounded-xl shadow-2xl animate-slide"
+      />
+      <Image 
+        src="/foto2.jpeg" 
+        width={300} 
+        height={400} 
+        alt="" 
+        className="w-full h-auto rounded-xl shadow-2xl animate-slide"
+      />
+      <Image 
+        src="/foto3.jpeg" 
+        width={300} 
+        height={400} 
+        alt="" 
+        className="w-full h-auto rounded-xl shadow-2xl animate-slide"
+      />
     </div>
 
-    <p className="mt-10 text-xl text-center max-w-2xl">
-Hola Mi vida, desde que te he tenido y has llegado a mi vida, todo a cambiado para bien, adoro pasar contigo es lo mejor del dia, Gracias por existir 💖
+    <p className="mt-10 text-base md:text-xl text-center max-w-2xl leading-relaxed">
+      Hola mi vida, desde que llegaste todo cambió para bien. 
+      Adoro cada momento contigo, eres lo mejor de mis días. 
+      Gracias por existir 💖
     </p>
 
-{pantallaFinal && (
-<audio ref={audioRef} loop>
-  <source src="/wannabeyours.mp3" type="audio/mpeg" />
-</audio>
-)}
+    <audio ref={audioRef} loop>
+      <source src="/wannabeyours.mp3" type="audio/mpeg" />
+    </audio>
 
   </div>
-  
 )}
+
 
 </section>
 
